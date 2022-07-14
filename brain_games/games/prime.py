@@ -6,10 +6,12 @@ def assignment():
 
 def get_answer_and_question():
     question = random.randrange(1, 50)
-    answer = 'no' if num_prime(question) else 'yes'
+    answer = 'yes' if num_prime(question) else 'no'
     return answer, question
 
 def num_prime(num):
+    if num == 1:
+        return True
     x = 2
     while x < num:
         if num % x == 0:
